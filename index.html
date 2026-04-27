@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lectronic | Official Store</title>
+    <title>Lectronic | Luxury Lighting</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -14,9 +14,9 @@
         <div class="logo"><i class="fas fa-lightbulb"></i> LECTRONIC</div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#footer">Contact</a></li>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#footer">Kontak</a></li>
             </ul>
         </nav>
         <div class="cart-icon" onclick="toggleCart()">
@@ -26,48 +26,41 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Terangi Setiap Momen</h1>
-            <p>Koleksi lampu eksklusif dengan desain minimalis untuk estetika ruangan Anda.</p>
-            <a href="#products" class="btn-main">Mulai Belanja</a>
+            <h1 class="glow-text">Bawa Cahaya ke Dalam Rumah</h1>
+            <p>Sentuhan kehangatan dalam setiap bohlam pilihan untuk kenyamanan istirahat Anda.</p>
+            <a href="#products" class="btn-glow">Lihat Koleksi</a>
         </div>
     </section>
 
     <section id="products" class="container">
-        <h2 class="section-title">Koleksi Lampu Terbaik</h2>
+        <h2 class="section-title">Produk Terlaris</h2>
         <div class="product-grid">
             
             <div class="product-card">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1507473884658-660523bb4f68?q=80&w=600&auto=format&fit=crop" alt="Lampu Meja">
-                </div>
+                <div class="img-placeholder"><i class="fas fa-lamp"></i></div>
                 <div class="info">
-                    <h3>Minimalist Table Lamp</h3>
-                    <p class="price">Rp 450.000</p>
-                    <button class="add-btn" onclick="addToCart('Minimalist Table Lamp', 450000)">Beli Sekarang</button>
+                    <h3>Lampu Meja Klasik</h3>
+                    <p class="price">Rp 550.000</p>
+                    <button class="add-btn" onclick="addToCart('Lampu Meja Klasik', 550000)">Tambah</button>
                 </div>
             </div>
 
             <div class="product-card">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1513506491744-935a0a402324?q=80&w=600&auto=format&fit=crop" alt="Lampu Gantung">
-                </div>
+                <div class="img-placeholder"><i class="fas fa-lightbulb"></i></div>
                 <div class="info">
-                    <h3>Modern Pendant Light</h3>
-                    <p class="price">Rp 1.200.000</p>
-                    <button class="add-btn" onclick="addToCart('Modern Pendant Light', 1200000)">Beli Sekarang</button>
+                    <h3>Bohlam Warm White</h3>
+                    <p class="price">Rp 85.000</p>
+                    <button class="add-btn" onclick="addToCart('Bohlam Warm White', 85000) ">Tambah</button>
                 </div>
             </div>
 
             <div class="product-card">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1534073828943-f801091bb18c?q=80&w=600&auto=format&fit=crop" alt="Lampu Tidur">
-                </div>
+                <div class="img-placeholder"><i class="fas fa-solar-panel"></i></div>
                 <div class="info">
-                    <h3>Aura Night Light</h3>
-                    <p class="price">Rp 320.000</p>
-                    <button class="add-btn" onclick="addToCart('Aura Night Light', 320000)">Beli Sekarang</button>
+                    <h3>Lampu Taman Solar</h3>
+                    <p class="price">Rp 420.000</p>
+                    <button class="add-btn" onclick="addToCart('Lampu Taman Solar', 420000)">Tambah</button>
                 </div>
             </div>
 
@@ -82,7 +75,7 @@
         <div id="cart-items"></div>
         <div class="sidebar-footer">
             <p>Total: <span id="total-price">Rp 0</span></p>
-            <button class="checkout">Checkout</button>
+            <button class="checkout">Bayar Sekarang</button>
         </div>
     </div>
 
