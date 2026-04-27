@@ -3,87 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lectronic | Kemewahan Cahaya</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Lectronic | Official Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo">
-            <i class="fas fa-lightbulb"></i> LECTRONIC
-        </div>
+        <div class="logo"><i class="fas fa-lightbulb"></i> LECTRONIC</div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#products">Koleksi</a></li>
-                <li><a href="#footer">Kontak</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </nav>
-        <div class="nav-icons">
-            <div class="cart-btn" onclick="toggleCart()">
-                <i class="fas fa-shopping-bag"></i>
-                <span id="cart-count">0</span>
-            </div>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
         </div>
     </header>
 
     <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h4 class="hero-subtitle">Premium Lighting Collection 2026</h4>
-            <h1 class="hero-title">Cahaya Yang <span>Menghidupkan</span> Ruang</h1>
-            <p>Hadapi malam dengan estetika tinggi. Lectronic menghadirkan teknologi pencahayaan cerdas dalam desain klasik modern.</p>
-            <div class="hero-actions">
-                <a href="#products" class="btn-gold">Eksplorasi Produk</a>
-                <a href="#" class="btn-outline">Tentang Kami</a>
-            </div>
+            <h1>Terangi Setiap Momen</h1>
+            <p>Koleksi lampu eksklusif dengan desain minimalis untuk estetika ruangan Anda.</p>
+            <a href="#products" class="btn-main">Mulai Belanja</a>
         </div>
     </section>
 
-    <section id="products" class="products">
-        <div class="section-header">
-            <h2>Koleksi Terpilih</h2>
-            <div class="line"></div>
-        </div>
-        
+    <section id="products" class="container">
+        <h2 class="section-title">Koleksi Lampu Terbaik</h2>
         <div class="product-grid">
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1542728928-1413d1894ed1?q=80&w=600" alt="Lamp">
-                    <span class="tag">Eksklusif</span>
+            
+            <div class="product-card">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1507473884658-660523bb4f68?q=80&w=600&auto=format&fit=crop" alt="Lampu Meja">
                 </div>
-                <div class="card-body">
-                    <h3>Golden Aura Desk</h3>
-                    <p>Lampu meja dengan aksen emas 24k.</p>
-                    <div class="price">Rp 1.250.000</div>
-                    <button onclick="addToCart('Golden Aura Desk', 1250000)">Tambah Ke Keranjang</button>
+                <div class="info">
+                    <h3>Minimalist Table Lamp</h3>
+                    <p class="price">Rp 450.000</p>
+                    <button class="add-btn" onclick="addToCart('Minimalist Table Lamp', 450000)">Beli Sekarang</button>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1513506491744-935a0a402324?q=80&w=600" alt="Lamp">
+            <div class="product-card">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1513506491744-935a0a402324?q=80&w=600&auto=format&fit=crop" alt="Lampu Gantung">
                 </div>
-                <div class="card-body">
-                    <h3>Crystal Pendant</h3>
-                    <p>Kemewahan kristal untuk ruang tamu Anda.</p>
-                    <div class="price">Rp 3.400.000</div>
-                    <button onclick="addToCart('Crystal Pendant', 3400000)">Tambah Ke Keranjang</button>
+                <div class="info">
+                    <h3>Modern Pendant Light</h3>
+                    <p class="price">Rp 1.200.000</p>
+                    <button class="add-btn" onclick="addToCart('Modern Pendant Light', 1200000)">Beli Sekarang</button>
                 </div>
             </div>
+
+            <div class="product-card">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1534073828943-f801091bb18c?q=80&w=600&auto=format&fit=crop" alt="Lampu Tidur">
+                </div>
+                <div class="info">
+                    <h3>Aura Night Light</h3>
+                    <p class="price">Rp 320.000</p>
+                    <button class="add-btn" onclick="addToCart('Aura Night Light', 320000)">Beli Sekarang</button>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <div id="cart-sidebar" class="sidebar">
         <div class="sidebar-header">
-            <h3>Keranjang Anda</h3>
-            <i class="fas fa-times" onclick="toggleCart()"></i>
+            <h3>Keranjang Belanja</h3>
+            <span onclick="toggleCart()">&times;</span>
         </div>
         <div id="cart-items"></div>
         <div class="sidebar-footer">
-            <div class="total">Total: <span id="total-price">Rp 0</span></div>
-            <button class="checkout">Selesaikan Pesanan</button>
+            <p>Total: <span id="total-price">Rp 0</span></p>
+            <button class="checkout">Checkout</button>
         </div>
     </div>
 
