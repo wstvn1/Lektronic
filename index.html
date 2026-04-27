@@ -1,87 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lectronic | Premium Lighting Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Lectronic | Future of Light</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">LECTRONIC</div>
+        <div class="logo"><i class="fas fa-lightbulb"></i> LEC<span>TRONIC</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#footer">Contact</a></li>
         </ul>
         <div class="cart-icon" onclick="toggleCart()">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-shopping-bag"></i>
             <span id="cart-count">0</span>
         </div>
     </nav>
 
     <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Cahaya Elegan dari Lectronic</h1>
-            <p>Sentuhan teknologi dan seni dalam setiap bohlam yang kami ciptakan.</p>
-            <a href="#products" class="btn">Eksplorasi Sekarang</a>
+            <h1 class="glow-text">Sentuhan Cahaya,<span>Sempurnakan Ruang</span></h1>
+            <p>Eksplorasi koleksi lampu estetik Lectronic. Desain modern, hemat energi, dan pintar.</p>
+            <div class="hero-btns">
+                <a href="#products" class="btn-primary">Lihat Koleksi</a>
+            </div>
+        </div>
+        <div class="hanging-lamp lamp-1">
+            <img src="https://cdni.iconscout.com/submission/render/premium/preview/pending/4437190-3683679.png?f=webp&w=200" alt="decor">
         </div>
     </section>
 
     <section id="products" class="container">
-        <h2 class="section-title">Produk Unggulan</h2>
+        <div class="header-box">
+            <div class="sub-title">Premium Lighting</div>
+            <h2 class="section-title">Koleksi Terpopuler</h2>
+        </div>
+        
         <div class="product-grid">
             <div class="product-card">
-                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1542728928-1413d1894ed1?auto=format&fit=crop&q=80&w=500'); background-size: cover; height: 250px; border-radius: 10px;"></div>
-                <h3>Lumina Desk Lamp</h3>
-                <p>Rp 650.000</p>
-                <button class="add-btn" onclick="addToCart('Lumina Desk Lamp', 650000)">Tambah ke Keranjang</button>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1542728928-1413d1894ed1?q=80&w=600&auto=format&fit=crop" alt="Aura Desk Lamp">
+                    <div class="badge">New</div>
+                </div>
+                <div class="product-info">
+                    <h3>Aura Smart Desk Lamp</h3>
+                    <p class="desc">Lampu meja minimalis dengan kontrol sentuh.</p>
+                    <p class="price">Rp 750.000</p>
+                    <button class="add-btn" onclick="addToCart('Aura Smart Desk Lamp', 750000)">
+                        <i class="fas fa-cart-plus"></i> Tambah
+                    </button>
+                </div>
             </div>
+
             <div class="product-card">
-                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1513506491744-935a0a402324?auto=format&fit=crop&q=80&w=500'); background-size: cover; height: 250px; border-radius: 10px;"></div>
-                <h3>Aura Pendant Light</h3>
-                <p>Rp 1.850.000</p>
-                <button class="add-btn" onclick="addToCart('Aura Pendant Light', 1850000)">Tambah ke Keranjang</button>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1513506491744-935a0a402324?q=80&w=600&auto=format&fit=crop" alt="Geometric Pendant">
+                </div>
+                <div class="product-info">
+                    <h3>Geometric Pendant Light</h3>
+                    <p class="desc">Lampu gantung artistik untuk ruang tamu.</p>
+                    <p class="price">Rp 1.950.000</p>
+                    <button class="add-btn" onclick="addToCart('Geometric Pendant Light', 1950000)">
+                        <i class="fas fa-cart-plus"></i> Tambah
+                    </button>
+                </div>
             </div>
+
             <div class="product-card">
-                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=500'); background-size: cover; height: 250px; border-radius: 10px;"></div>
-                <h3>Smart Neon Flex</h3>
-                <p>Rp 320.000</p>
-                <button class="add-btn" onclick="addToCart('Smart Neon Flex', 320000)">Tambah ke Keranjang</button>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1582231268305-6450a80e1a1b?q=80&w=600&auto=format&fit=crop" alt="Arc Floor Lamp">
+                </div>
+                <div class="product-info">
+                    <h3>Modern Arc Floor Lamp</h3>
+                    <p class="desc">Lampu berdiri elegan untuk sudut membaca.</p>
+                    <p class="price">Rp 2.300.000</p>
+                    <button class="add-btn" onclick="addToCart('Modern Arc Floor Lamp', 2300000)">
+                        <i class="fas fa-cart-plus"></i> Tambah
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
     <div id="cart-sidebar" class="cart-sidebar">
         <div class="cart-header">
-            <h3>Keranjang Belanja</h3>
+            <h3><i class="fas fa-shopping-cart"></i> Keranjang</h3>
             <span class="close-cart" onclick="toggleCart()">&times;</span>
         </div>
         <div id="cart-items"></div>
         <div class="cart-footer">
-            <h4>Total: <span id="total-price">Rp 0</span></h4>
-            <button class="checkout-btn">Proses Checkout</button>
+            <div class="total-box">
+                <span>Total:</span>
+                <span id="total-price" class="total-amount">Rp 0</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
         </div>
     </div>
 
     <footer id="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>LECTRONIC</h3>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2><i class="fas fa-lightbulb"></i> LEC<span>TRONIC</span></h2>
                 <p>Menerangi setiap sudut hunian dengan kecerdasan dan gaya.</p>
             </div>
-            <div class="footer-section">
-                <h4>Social Media</h4>
-                <div class="socials">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-linkedin"></i>
+            <div class="footer-links">
+                <h4>Kategori</h4>
+                <a href="#">Lampu Gantung</a>
+                <a href="#">Lampu Meja</a>
+                <a href="#">Smart LED</a>
+            </div>
+            <div class="footer-social">
+                <h4>Ikuti Kami</h4>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
         </div>
-        <p class="copyright">&copy; 2026 Lectronic Lighting. Semua Hak Dilindungi.</p>
+        <div class="bottom-bar">
+            &copy; 2026 Lectronic Lighting. All rights reserved.
+        </div>
     </footer>
 
     <script src="script.js"></script>
