@@ -1,64 +1,79 @@
+:root {
+    --midnight: #0b132b;    /* Biru sangat gelap (Ruangan gelap) */
+    --amber: #ffb703;      /* Kuning hangat (Cahaya lampu) */
+    --soft-glow: rgba(255, 183, 3, 0.4);
+    --white: #ffffff;
+}
+
 * {
     margin: 0; padding: 0; box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body { background: #f9f9f9; }
+body { background: #050a18; color: var(--white); }
 
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 20px 10%; background: #1a1a1a; color: white;
+    padding: 20px 8%; background: var(--midnight); 
+    border-bottom: 2px solid var(--amber);
     position: sticky; top: 0; z-index: 1000;
 }
 
-.logo { font-size: 1.5rem; font-weight: 700; color: #fbc02d; }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--amber); text-shadow: 0 0 10px var(--soft-glow); }
 .nav-links { display: flex; list-style: none; gap: 20px; }
-.nav-links a { color: white; text-decoration: none; }
+.nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; }
+.nav-links a:hover { color: var(--amber); }
 
 .hero {
-    height: 70vh;
-    background: url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1467&auto=format&fit=crop') center/cover;
+    height: 60vh; background: radial-gradient(circle, #1c2541 0%, #0b132b 100%);
     display: flex; align-items: center; justify-content: center;
-    text-align: center; color: white; position: relative;
+    text-align: center; padding: 0 20px;
 }
 
-.hero-overlay {
-    position: absolute; top:0; left:0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
+.glow-text { 
+    font-size: 2.5rem; color: var(--amber); 
+    text-shadow: 0 0 20px var(--soft-glow); /* Efek tulisan bercahaya */
 }
 
-.hero-content { position: relative; z-index: 1; }
-.hero-content h1 { font-size: 3rem; margin-bottom: 10px; }
+.btn-glow {
+    background: var(--amber); color: var(--midnight); padding: 12px 30px;
+    text-decoration: none; border-radius: 5px; font-weight: 700;
+    box-shadow: 0 0 15px var(--soft-glow); transition: 0.3s;
+}
+.btn-glow:hover { transform: scale(1.05); box-shadow: 0 0 25px var(--amber); }
 
-.container { padding: 50px 10%; }
-.section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+.container { padding: 50px 8%; }
+.section-title { text-align: center; margin-bottom: 40px; color: var(--white); }
 
 .product-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;
 }
 
 .product-card {
-    background: white; border-radius: 10px; overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s;
+    background: #1c2541; border-radius: 15px; overflow: hidden;
+    border: 1px solid rgba(255, 183, 3, 0.1); transition: 0.3s;
 }
 
-.product-card:hover { transform: translateY(-10px); }
+.product-card:hover { border-color: var(--amber); box-shadow: 0 0 15px var(--soft-glow); }
 
-/* Bagian Gambar Produk */
-.img-box { width: 100%; height: 250px; overflow: hidden; }
-.img-box img { width: 100%; height: 100%; object-fit: cover; }
+.img-placeholder {
+    height: 200px; display: flex; align-items: center; justify-content: center;
+    font-size: 4rem; color: var(--amber); background: rgba(255, 183, 3, 0.05);
+}
 
 .info { padding: 20px; text-align: center; }
-.price { color: #fbc02d; font-weight: 700; font-size: 1.2rem; margin: 10px 0; }
+.price { color: var(--amber); font-weight: 700; margin-bottom: 15px; }
 
 .add-btn {
-    width: 100%; padding: 10px; background: #1a1a1a; color: white;
-    border: none; border-radius: 5px; cursor: pointer;
+    width: 100%; padding: 10px; background: transparent; border: 1px solid var(--amber);
+    color: var(--amber); border-radius: 5px; cursor: pointer; transition: 0.3s;
 }
 
+.add-btn:hover { background: var(--amber); color: var(--midnight); }
+
+/* Sidebar Cart */
 .sidebar {
     position: fixed; right: -400px; top:0; width: 350px; height: 100%;
-    background: white; box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-    transition: 0.4s; padding: 20px; z-index: 2000;
+    background: var(--midnight); color: white; padding: 20px; transition: 0.4s;
 }
-.sidebar.active { right: 0; }
+.sidebar.active { right: 0; border-left: 2px solid var(--amber); }
